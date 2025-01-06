@@ -1,7 +1,10 @@
 <script lang="ts" setup>
 import IconCheck from '../components/icons/IconCheck.vue'
 import { useRoute } from "vue-router";
+
+import { onMounted } from 'vue'
  const route = useRoute()
+
 const list = [
     'We provide high-quality products and services that bring joy to our customers.',
     'We create new businesses that lead to happiness for generations to come with a fresh perspective.',
@@ -41,10 +44,10 @@ const list = [
              <img src="/wood-house.jpg" alt="" srcset="" class="w-full h-screen object-cover">
             </div>
             <div class="p-10 lg:p-20">
-                <h2 class="text-3xl lg:text-6xl font-bold mb-5">
+                <h2 class="anim-fade-up text-3xl lg:text-6xl font-bold mb-5">
                     Corporate Philosophy
                 </h2>
-                <p class="leading-relaxed">
+                <p class="anim-fade-up leading-relaxed">
                     The Sumitomo Forestry Group utilizes wood as a healthy and environmentally friendly natural resource to provide a diverse range of lifestyle-related services that contribute to the realization of a sustainable and prosperous society. All our efforts are based on Sumitomo’s Business Spirit, which places prime importance on fairness and integrity for the good of society.
                 </p>
             </div>
@@ -53,17 +56,17 @@ const list = [
     <section class="bg-primary text-white">
         <div class="grid grid-cols-1 lg:grid-cols-2 items-center ">
             <div class="p-10 lg:p-20">
-                <h2 class="text-3xl lg:text-6xl font-bold mb-5">
+                <h2 class="anim-fade-up text-3xl lg:text-6xl font-bold mb-5">
                     Our Values
                 </h2>
-                <p class="leading-relaxed">
+                <div class="anim-fade-up leading-relaxed">
                     <ul>
                         <li v-for="item in list" :key="item" class="flex  mb-5">
                             <IconCheck class="text-2xl mr-3 shrink-0"/>
                             {{ item }}
                         </li>
                     </ul>
-                </p>
+                </div>
             </div>
             <div class="w-full h-full min-h-screen">
              <img src="/values.jpg" alt="" srcset="" class="w-full h-screen object-cover">

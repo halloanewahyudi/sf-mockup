@@ -44,7 +44,7 @@ onMounted(() => {
                     to find Japanese Quality Materials!!</p>
             </div>
             <div>
-                <img src="https://www.sf-indonesia.co.id/assets/img/Showroom.jpg" alt=""
+                <img src="/showroom.jpg" alt=""
                     class="w-full h-screen object-cover">
             </div>
         </div>
