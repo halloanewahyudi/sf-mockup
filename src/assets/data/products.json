@@ -1,0 +1,32 @@
+[
+    {
+        "image": "/showroom.jpg",
+        "title": "Plywood",
+        "description": "loremipsum doloretsitamet"
+    },
+    {
+        "image": "/showroom.jpg",
+        "title": "Particle board",
+        "description": "Consectetur adipisicing elit."
+    },
+    {
+        "image": "/showroom.jpg",
+        "title": "Low Pressure Melamine Board(MFC)",
+        "description": "Fuga corporis numquam sunt pariatur"
+    },
+    {
+        "image": "/showroom.jpg",
+        "title": "Gypsum Board(YOSHINO GYPSUM)",
+        "description": "Delectus voluptatum quis fugit quod mollitia"
+    },
+    {
+        "image": "/showroom.jpg",
+        "title": "Wooden Door",
+        "description": "Tempore a tempora expedita facilis incidunt"
+    },
+    {
+        "image": "/showroom.jpg",
+        "title": "Wooden Wall Panels",
+        "description": "Consequuntur quaerat repudiandae cum nam"
+    }
+]

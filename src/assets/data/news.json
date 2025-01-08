@@ -1,0 +1,20 @@
+[
+    {
+        "image": "/showroom.jpg",
+        "title": "News title One",
+        "description": "loremipsum doloretsitamet",
+        "date": "10/03/2024"
+    },
+    {
+        "image": "/showroom.jpg",
+        "title": "News title Two",
+        "description": "Consectetur adipisicing elit.",
+        "date": "21/06/2024"
+    },
+    {
+        "image": "/showroom.jpg",
+        "title": "News title Three",
+        "description": "Fuga corporis numquam sunt pariatur",
+        "date": "13/07/2024"
+    }
+ ]

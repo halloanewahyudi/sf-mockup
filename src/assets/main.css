@@ -4,6 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+[data-scroll-container] {
+  overflow: hidden;
+}
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+html.has-scroll-dragging {
+  cursor: grabbing;
+}
+
+html,body{
+  scroll-behavior: smooth;
+}
 @layer base{
     body{
         font-family: "Plus Jakarta Sans", serif;

@@ -58,7 +58,7 @@ const products = [
             </div>
             <div class=""> <h4 class="text-3xl text-primary">Product List</h4></div>
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 lg:gap-10">
-                <Card v-for="item in products" :key="item" :image="item.image" :title="item.title"
+                <Card v-for="(item,index) in products" :key="item" :image="item.image" :title="item.title"
                     :description="item.description" />
             </div>
         </div>

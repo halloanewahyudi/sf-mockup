@@ -40,13 +40,13 @@ onMounted(() => {
         :class="{ 'navbar-home': route.name === 'Home', 'open-menu': openMenu === true }">
         <div class="container">
             <div class="flex justify-between items-center gap-4  ">
-                <router-link to="/" @click="openMenu = false" class="flex items-center gap-2 logo">
+                <router-link to="/"  class="flex items-center gap-2 logo">
                     <img src="/logo.png" alt="" srcset="" class="w-12  ">
                     <h4 class="text-2xl font-medium  uppercase hidden lg:block">Sumitomo Forestry Indonesia</h4>
                 </router-link>
                 <ul class="menu hidden lg:flex">
                         <li  v-for="item in router.options.routes" :key="item">
-                            <router-link :to="item.path" @click="openMenu = false">{{ item.name }}</router-link> 
+                            <router-link to="/" >{{ item.name }}</router-link> 
                         </li>
                     </ul>
                 <button @click="openMenu = !openMenu"
@@ -78,7 +78,7 @@ onMounted(() => {
                 <div class="kanan p-6 lg:p-10 ">
                     <ul class="menu">
                         <li @mouseenter="getMenu(item)" v-for="item in router.options.routes" :key="item">
-                            <router-link :to="item.path" @click="openMenu = false">{{ item.name }}</router-link> 
+                            <router-link to="/" >{{ item.name }}</router-link> 
                         </li>
                     </ul>
                 </div>

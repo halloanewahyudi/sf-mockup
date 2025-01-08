@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import Cover from './sections/Cover.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import {useRoute} from 'vue-router'
@@ -14,9 +13,9 @@ const route = useRoute()
     <component :is="Component" />
   </transition>
 </router-view>
-<div v-if="route.path !== '/'">
+
   <Footer />
-</div>
+
 
    </div>
 </template>

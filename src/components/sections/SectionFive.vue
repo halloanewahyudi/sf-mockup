@@ -1,5 +1,8 @@
 <script lang="ts" setup>
  import Card from '../Card.vue';
+ import IconArrowUpRight from '@/components/icons/IconArrowUpRight.vue';
+
+
  const projects = [
     {
         image: '/morizen.jpg',
@@ -23,6 +26,7 @@
     },
 
  ]
+
 </script>
 
 <template>
@@ -32,15 +36,16 @@
             <p class="mb-5 text-lg">We aim to develop the better quality of houses to contribute to the quality of life in Indonesia
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mb-10">
-                <div v-for="item in projects" :key="item" :class="item.myclass">
-                    <Card image_height="h-80" :image="item.image" :title="item.title" :description="item.description" />
+                <div class="project-item" v-for="(item,index) in projects" :key="item" :class="item.myclass">
+                    <Card image_height="h-80" :index="index" :image="item.image" :title="item.title" :description="item.description" />
                 </div>
             </div>
             <div class="relative w-full h-[480px] overflow-hidden">
                 <img src="/ksk.jpg" alt="" class="w-full h-90 object-cover">
-                <div class="absolute p-6 bg-primary bg-opacity-85 text-white right-0 bottom-0 max-w-[580px]">
+                <div class="absolute p-6 bg-primary bg-opacity-85 text-white right-0 bottom-0 max-w-[580px] group">
                     <h4 class="text-xl text-white mb-3">Coming Soon Project</h4>
-                    <p class="text-gray-100">High Rise Mixed Use Project in CBD Jakarta Joint Project with Sinarmas Land Invested Year 2020</p>
+                    <p class="text-gray-100 mb-3">High Rise Mixed Use Project in CBD Jakarta Joint Project with Sinarmas Land Invested Year 2020</p>
+                 <button><IconArrowUpRight class="stroke-white group-hover:-translate-y-2 duration-300" /></button>
                 </div>
             </div>
         </div>
