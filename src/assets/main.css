@@ -20,6 +20,12 @@
         font-weight: 400-700;
         font-style: normal;
     }
+    p{
+      @apply font-normal;
+    }
+    h1,h2,h3,h4{
+      @apply text-neutral-900 font-semibold;
+    }
 
      /* scrollbar */
   /* width */

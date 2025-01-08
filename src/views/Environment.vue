@@ -14,7 +14,7 @@ const route = useRoute()
                 <h2 class="text-3xl lg:text-6xl font-bold mb-5 text-primary">
                     Environment Business
                 </h2>
-                <h4>Wana Subur Lestari Plantation company</h4>
+                <h4 class="text-xl">Wana Subur Lestari Plantation company</h4>
             </div>
             <div>
                 <img src="/showroom.jpg" alt=""

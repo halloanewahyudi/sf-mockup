@@ -33,7 +33,7 @@ onMounted(() => {
                 <h2 class="text-3xl lg:text-6xl font-bold mb-5 text-primary">
                     Timber and Building Materials
                 </h2>
-                <h4>Interior Design Showroom</h4>
+                <h4 class="text-xl mb-3">Interior Design Showroom</h4>
                 <p class="leading-relaxed mb-5">
                     We started our business as a distributor of building materials.
                     Not only the products from our group factories, we deal some Japanese products.

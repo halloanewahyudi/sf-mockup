@@ -36,6 +36,9 @@ export default {
           900: '#90003c',
           950: '#58001e'
         }
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
       }
     }
   },

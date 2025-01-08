@@ -27,7 +27,8 @@ const router = useRouter()
                     <h2 class="text-xl font-bold mb-5">Menu</h2>
                     <ul class="menu">
                         <li  v-for="item in router.options.routes" :key="item">
-                            <router-link :to="item.path">{{ item.name }}</router-link>
+                           <!--  <router-link :to="item.path">{{ item.name }}</router-link> -->
+                            <a :href="item.path"> {{ item.name }}</a>
                         </li>
                     </ul>
                 </div>

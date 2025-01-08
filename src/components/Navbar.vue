@@ -20,13 +20,18 @@ const getMenu = (item) => {
         image: item.meta.image
     }
 }
+const scrolledNavbar = () => {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            navbar.value.classList.add('navbar-scrolled')
+        } else {
+            navbar.value.classList.remove('navbar-scrolled')
+        }
+    })
+}
 
 onMounted(() => {
-    if (route.name === 'Home') {
-        navbar.value.classList.add('navbar-home')
-    } else {
-        navbar.value.classList.remove('navbar-home')
-    }
+ scrolledNavbar()
 })
 </script>
 
@@ -39,8 +44,13 @@ onMounted(() => {
                     <img src="/logo.png" alt="" srcset="" class="w-12  ">
                     <h4 class="text-2xl font-medium  uppercase hidden lg:block">Sumitomo Forestry Indonesia</h4>
                 </router-link>
+                <ul class="menu hidden lg:flex">
+                        <li  v-for="item in router.options.routes" :key="item">
+                            <router-link :to="item.path" @click="openMenu = false">{{ item.name }}</router-link> 
+                        </li>
+                    </ul>
                 <button @click="openMenu = !openMenu"
-                    class="relative hover:bg-opacity-100 duration-300  w-10 h-10 p-4 flex justify-center items-center">
+                    class="relative hover:bg-opacity-100 duration-300  w-10 h-10 p-4 lg:hidden flex justify-center items-center">
                     <span class="pr-20"> Menu </span>
                     <IconClose v-if="openMenu" class="text-3xl absolute " />
                     <IconHamburger v-else class="text-2xl absolute " />
@@ -49,7 +59,7 @@ onMounted(() => {
         </div>
     </nav>
     <transition name="slide">
-        <div class="fixed top-0 right-0 w-full  h-full bg-primary text-white z-40" v-if="openMenu">
+        <div class="lg:hidden fixed top-0 right-0 w-full  h-full bg-primary text-white z-40" v-if="openMenu">
             <div class="grid grid-cols-1 lg:grid-cols-2  min-h-screen items-center">
                 <div class="hidden lg:flex flex-col justify-center items-center kiri p-6 h-full relative ">
                     <div v-if="getItem">
@@ -68,7 +78,7 @@ onMounted(() => {
                 <div class="kanan p-6 lg:p-10 ">
                     <ul class="menu">
                         <li @mouseenter="getMenu(item)" v-for="item in router.options.routes" :key="item">
-                            <router-link :to="item.path" @click="openMenu = false">{{ item.name }}</router-link>
+                            <router-link :to="item.path" @click="openMenu = false">{{ item.name }}</router-link> 
                         </li>
                     </ul>
                 </div>
@@ -97,22 +107,23 @@ onMounted(() => {
 .slide-leave-to {
     @apply translate-y-full;
 }
-
+.menu {
+    @apply lg:flex items-center gap-4;
+}
 .menu li a {
-    @apply text-2xl lg:text-5xl block py-3 opacity-75 hover:opacity-100 duration-300 ease-in-out;
+    @apply hover:text-primary duration-300;
 }
 
-.navbar {
-    @apply bg-white;
+.navbar{
+    @apply bg-transparent text-white transition-all duration-200 ease-in-out;
 }
-
-.navbar.navbar-home,
-.navbar.open-menu {
-    @apply text-white bg-transparent;
+.navbar.navbar-scrolled {
+    @apply bg-white text-neutral-700 border-b border-gray-200;
 }
-
-.navbar.navbar-home .logo,
-.navbar.open-menu .logo {
+.navbar .logo {
     @apply brightness-0 invert;
+}
+.navbar.navbar-scrolled .logo {
+    @apply filter-none;
 }
 </style>

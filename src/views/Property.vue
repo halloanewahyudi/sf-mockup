@@ -4,8 +4,6 @@ import { onMounted } from 'vue'
 
 const route = useRoute()
 
-
-
 </script>
 
 <template>
@@ -20,9 +18,9 @@ const route = useRoute()
                 <h2 class="text-3xl lg:text-6xl font-bold mb-5 text-primary">
                     Housing and Real Estate Business
                 </h2>
-                <p class="">We aim to develop the better quality of houses to contribute to the quality of life in
+                <h4 class="text-xl">We aim to develop the better quality of houses to contribute to the quality of life in
                     Indonesia
-                </p>
+                </h4>
 
             </div>
             <div>
