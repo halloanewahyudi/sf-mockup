@@ -91,8 +91,9 @@ onUnmounted(() => {
             </div>
         </section> <!-- end section three -->
 
-        <section class="py-20 section-map"> <!-- section four -->
-            <div class="container">
+        <section class="py-20 section-map relative"> <!-- section four -->
+            <div class="absolute bg-gradient-to-tr  from-black via-primary-500/60  to-transparent opacity-80 top-0 left-0 w-full h-full"></div>
+            <div class="container relative">
                 <Jawa />
             </div>
         </section> <!-- end section four -->
@@ -146,6 +147,7 @@ onUnmounted(() => {
 </template>
 <style scoped>
 .section-map {
-    background: url('');
+    background: url('/forest.jpg') no-repeat center;
+    background-size: cover;
 }
 </style>
