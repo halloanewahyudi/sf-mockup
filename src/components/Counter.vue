@@ -52,7 +52,7 @@ onMounted(() => {
       <!-- Reassign ref counter ke elemen yang diubah -->
       <h2
         ref="counter"
-        class="text-6xl lg:text-8xl lg:leading-none mb-0  text-gray-200 number"
+        class="text-6xl lg:text-8xl lg:leading-none mb-0  text-primary number"
       >
         0
       </h2>
