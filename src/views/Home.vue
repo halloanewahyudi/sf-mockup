@@ -82,7 +82,7 @@ onUnmounted(() => {
                     </div>
                 </div>
                 <div class="">
-                    <h4 class="text-3xl text-primary">Product List</h4>
+                    <h4 class="text-3xl text-primary">Our Product</h4>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5 lg:gap-10">
                     <Card v-for="(item, index) in products" :key="item" :image="item.image" :title="item.title"
@@ -91,7 +91,7 @@ onUnmounted(() => {
             </div>
         </section> <!-- end section three -->
 
-        <section class="pb-20"> <!-- section four -->
+        <section class="py-20 section-map"> <!-- section four -->
             <div class="container">
                 <Jawa />
             </div>
@@ -144,3 +144,8 @@ onUnmounted(() => {
 
     </div>
 </template>
+<style scoped>
+.section-map {
+    background: url('');
+}
+</style>
