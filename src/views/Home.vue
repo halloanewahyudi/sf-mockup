@@ -40,7 +40,10 @@ onUnmounted(() => {
         <section id="sec2" class="section-2 pb-20"> <!-- section two -->
             <div class="container">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10 items-center ">
-                    <Counter counter="240" suffix="Unit" text="Projects we carry out" />
+                    <div class="bg-primary text-white flex flex-col justify-center items-center h-full">
+                        <Counter counter="240" suffix="Unit" text="Projects we carry out" />
+                    </div>
+                   
                     <div class="sekilas md:col-span-2">
                         <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Since our founding more than 330 years ago
                         </h4>

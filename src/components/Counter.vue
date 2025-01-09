@@ -52,11 +52,11 @@ onMounted(() => {
       <!-- Reassign ref counter ke elemen yang diubah -->
       <h2
         ref="counter"
-        class="text-6xl lg:text-9xl lg:leading-none mb-0 font-bold text-gray-200 number"
+        class="text-6xl lg:text-8xl lg:leading-none mb-0  text-gray-200 number"
       >
         0
       </h2>
-      <span class="text-3xl lg:text-4xl font-semibold text-primary">{{ props.suffix }}</span>
+      <span class="text-3xl  font-semibold ">{{ props.suffix }}</span>
     </div>
     <p class="text-2xl">{{ props.text }}</p>
   </div>
