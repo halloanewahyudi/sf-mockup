@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref , onMounted} from 'vue'
 import IconArrowUpRight from '@/components/icons/IconArrowUpRight.vue'
+
 const pins = [
     {
         title: 'Kutai Timber Indonesia',
@@ -36,6 +37,7 @@ const info = ref(null)
 const getInfo = (item) => {
     info.value = item
 }
+
 </script>
 
 <template>
@@ -55,13 +57,14 @@ const getInfo = (item) => {
                     </div>
                 </div>
                 <div v-else>
-                    <p class="text-xl mt-3">Several factories in various regions that we have</p>
+                    <p class="text-xl mt-3">
+                        We have 4 factories that produce high quality Plywood, Particle Board and Furniture in Java island.</p>
                 </div>
             </transition>
 
         </div>
         <div class="md:col-span-2">
-            <div class="relative max-w-max mx-auto">
+            <div class="map relative max-w-max mx-auto">
                 <div @click="getInfo(item)" v-for="item in pins" class="pin group "
                     :style="`top:${item.top}; left:${item.left};`">
                     <span
