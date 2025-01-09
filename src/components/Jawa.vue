@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref , onMounted} from 'vue'
+import { ref, onMounted } from 'vue'
 import IconArrowUpRight from '@/components/icons/IconArrowUpRight.vue'
 
 const pins = [
@@ -58,7 +58,11 @@ const getInfo = (item) => {
                 </div>
                 <div v-else>
                     <p class="text-xl mt-3">
-                        We have 4 factories that produce high quality Plywood, Particle Board and Furniture in Java island.</p>
+                        We have 4 factories that produce high quality Plywood, Particle Board and Furniture in Java
+                        island.
+                    </p>
+                    <p class="mt-3">  Theya are: Kutai Timber Indonesia, Rimba Partikel Indonesia, AST Indonesia, Sinar Rimba
+                        Pasifik</p>
                 </div>
             </transition>
 
