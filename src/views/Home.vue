@@ -6,6 +6,7 @@ import Card from '@/components/Card.vue';
 import IconArrowUpRight from '@/components/icons/IconArrowUpRight.vue';
 import Jawa from '@/components/Jawa.vue';
 import Products from '@/components/Products.vue';
+import Video from '@/components/Video.vue';
 // data json
 import products from "@/assets/data/products.json";
 import projects from "@/assets/data/projects.json";
@@ -14,10 +15,7 @@ import news from "@/assets/data/news.json";
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-
 gsap.registerPlugin(ScrollTrigger);
-
-
 
 
 
@@ -50,6 +48,8 @@ gsap.registerPlugin(ScrollTrigger);
             </div>
         </section> <!-- end section two -->
 
+       
+
         <section class="section pb-20"> <!-- section three -->
             <div class="container flex flex-col ">
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 bg-primary items-center text-white">
@@ -77,6 +77,7 @@ gsap.registerPlugin(ScrollTrigger);
                     <template #title>
                         <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Trading</h4>
                         <p>We started our business in Indonesia as a distributor of building materials. </p>
+                         <hr class="my-5">
                     </template>
                 </Products>
                 </div>
@@ -111,7 +112,7 @@ gsap.registerPlugin(ScrollTrigger);
         </section> <!-- end section five -->
 
         
-        <section class="py-20 section-map relative"> <!-- section four -->
+        <section class="py-20  section-map relative"> <!-- section four -->
             <div
                 class="absolute bg-gradient-to-tr  from-black via-primary-500/60  to-transparent opacity-80 top-0 left-0 w-full h-full">
             </div>
@@ -119,6 +120,10 @@ gsap.registerPlugin(ScrollTrigger);
                 <Jawa />
             </div>
         </section> <!-- end section four -->
+
+        <section class="mt-20">
+                <Video  />
+        </section>
 
         <section class="py-20"> <!-- section six -->
             <div class="container">

@@ -1,31 +1,31 @@
 [
     {
-        "image": "/morizen.jpg",
+        "image": "/plywood.jpg",
         "title": "Plywood",
         "description": "loremipsum doloretsitamet"
     },
     {
-        "image": "/morizen.jpg",
+        "image": "/particle-board.jpg",
         "title": "Particle board",
         "description": "Consectetur adipisicing elit."
     },
     {
-        "image": "/morizen.jpg",
+        "image": "/mfc.jpg",
         "title": "Low Pressure Melamine Board(MFC)",
         "description": "Fuga corporis numquam sunt pariatur"
     },
     {
-        "image": "/morizen.jpg",
+        "image": "/gypsum.jpg",
         "title": "Gypsum Board(YOSHINO GYPSUM)",
         "description": "Delectus voluptatum quis fugit quod mollitia"
     },
     {
-        "image": "/morizen.jpg",
+        "image": "/door.jpg",
         "title": "Wooden Door",
         "description": "Tempore a tempora expedita facilis incidunt"
     },
     {
-        "image": "/morizen.jpg",
+        "image": "/wall.jpg",
         "title": "Wooden Wall Panels",
         "description": "Consequuntur quaerat repudiandae cum nam"
     }

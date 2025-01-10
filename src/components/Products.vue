@@ -33,7 +33,7 @@ const defaultProduct = products[0];
 
 <template>
     <div>
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-5 lg:gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 ">
             
             <!-- Konten Produk -->
             <div class="md:col-span-2 lg:col-span-4 overflow-hidden">
@@ -41,10 +41,10 @@ const defaultProduct = products[0];
                     <transition name="fade">
                         <!-- Hanya render jika produk aktif -->
                         <div v-if="product" key="product-content"
-                            class="product-content  relative w-full">
+                            class="product-content h-full relative w-full">
                             <div class="w-full  overflow-hidden">
                                 <img :src="product.image" alt="" srcset=""
-                                    class="w-full  object-cover hover:scale-105 duration-300">
+                                    class="w-full h-full object-cover hover:scale-105 duration-300">
                             </div>
                             <div class="p-5 bg-white absolute bottom-0 left-0 ">
                                 <h3 class="text-xl font-bold mb-2">{{ product.title }}</h3>
@@ -53,10 +53,10 @@ const defaultProduct = products[0];
                         </div>
 
                         <div v-else>
-                            <div class="product-content relative ">
-                                <div class="w-full   overflow-hidden">
+                            <div class=" relative ">
+                                <div class="w-full h-full  overflow-hidden">
                                     <img :src="defaultProduct.image" alt="" srcset=""
-                                        class="w-full   object-cover hover:scale-105 duration-300">
+                                        class="w-full h-full  object-cover hover:scale-105 duration-300">
                                 </div>
                                 <div class="p-5 bg-white absolute bottom-0 left-0 ">
                                     <h3 class="text-xl font-bold mb-2">{{ defaultProduct.title }}</h3>
@@ -70,22 +70,21 @@ const defaultProduct = products[0];
 
             <!-- Daftar Tab -->
             <div class="md:col-span-1 lg:col-span-2 h-full flex flex-col justify-center items-center">
-                <div class="w-full ">
+                <div class="w-full p-6 lg:p-10">
                     <slot name="title" ></slot>
-                <ul class="list-product space-y mt-10 ">
+                <ul class="list-product space-y ">
                     <li v-for="(item, index) in products" :key="item.id" :class="{
                         'font-bold text-primary': index === activeIndex,
                         'hover:text-primary-500': index !== activeIndex,
                     }" class="">
                        
-                        <button @click="getProduct(item, index)" class="flex items-center gap-2 p-2">
+                        <button @click="getProduct(item, index)" class="flex items-center gap-2 p-2 text-left font-medium hover:bg-primary-100 duration-200">
                             <div v-if="index === activeIndex" class="w-2 h-2 rounded-full bg-primary inline-block"></div> 
                              {{ item.title }}
                         </button>
                     </li>
                 </ul>
                 </div>
-              
             </div>
         </div>
     </div>
