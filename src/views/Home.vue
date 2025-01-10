@@ -17,6 +17,21 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+onMounted(() => {
+    gsap.fromTo(
+        '.matterport',
+        { opacity: 0, x: 100 },
+        { opacity: 1, x: 0, duration: 1, ease: 'power1.out',
+         scrollTrigger: {
+            trigger: '.matterport',
+            start: 'top 80%',
+            end: 'top 50%',
+            scrub: 1,
+            markers: false,
+          }
+         }
+    )
+})
 
 
 </script>
@@ -110,7 +125,10 @@ gsap.registerPlugin(ScrollTrigger);
                 </div>
             </div>
         </section> <!-- end section five -->
-
+    
+        <section class="matterport">
+            <iframe src="https://my.matterport.com/show?m=gq4cSybaiCi" frameborder="0" class="w-full h-screen"></iframe>
+        </section>
         
         <section class="py-20  section-map relative"> <!-- section four -->
             <div
