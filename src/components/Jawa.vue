@@ -44,6 +44,10 @@ const getInfo = (item) => {
     <div class="grid grid-cols-1 md:grid-cols-3  gap-6 text-primary-50">
         <div>
             <h4 class="text-3xl text-white ">Group Factory List </h4>
+            <p class="text-xl mt-3">
+                We have 4 factories that produce high quality Plywood, Particle Board and Furniture in Java
+                island.
+            </p>
             <transition name="slide">
                 <div v-if="info" class="mt-10">
                     <div class="pl-6  border-l-4 border-primary-100 flex flex-col gap-2">
@@ -57,11 +61,9 @@ const getInfo = (item) => {
                     </div>
                 </div>
                 <div v-else>
-                    <p class="text-xl mt-3">
-                        We have 4 factories that produce high quality Plywood, Particle Board and Furniture in Java
-                        island.
-                    </p>
-                    <p class="mt-3">  Theya are: Kutai Timber Indonesia, Rimba Partikel Indonesia, AST Indonesia, Sinar Rimba
+
+                    <p class="mt-3"> Theya are: Kutai Timber Indonesia, Rimba Partikel Indonesia, AST Indonesia, Sinar
+                        Rimba
                         Pasifik</p>
                 </div>
             </transition>

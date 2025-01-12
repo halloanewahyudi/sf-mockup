@@ -39,6 +39,10 @@ html,body{
     h1,h2,h3,h4{
       @apply text-neutral-900 font-semibold;
     }
+    
+    .text{
+      @apply flex flex-col gap-7;
+    }
 
      /* scrollbar */
   /* width */

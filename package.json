@@ -14,7 +14,8 @@
     "locomotive-scroll": "^4.1.4",
     "vue": "^3.5.13",
     "vue-responsive-video-background-player": "^2.4.1",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "vue3-marquee": "^4.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",

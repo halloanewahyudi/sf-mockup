@@ -4,6 +4,16 @@ import IconClose from '@/components/icons/IconClose.vue'
 import { ref, onMounted } from 'vue'
 import { useRouter, useRoute } from "vue-router";
 
+const menus = ref([
+'Home',
+'About',
+'News',
+'Trading',
+'Property',
+'Meet the Team',
+'Link',
+'Contact Us'
+])
 const openMenu = ref(false)
 
 const router = useRouter()
@@ -45,8 +55,8 @@ onMounted(() => {
                     <h4 class="text-2xl font-medium  uppercase hidden lg:block">Sumitomo Forestry Indonesia</h4>
                 </router-link>
                 <ul class="menu hidden lg:flex">
-                        <li  v-for="item in router.options.routes" :key="item">
-                            <router-link to="/" >{{ item.name }}</router-link> 
+                        <li  v-for="item in menus" :key="item">
+                           <a href="/" target="_blank" rel="noopener noreferrer">{{ item }}</a>
                         </li>
                     </ul>
                 <button @click="openMenu = !openMenu"
@@ -118,7 +128,7 @@ onMounted(() => {
     @apply bg-transparent text-white transition-all duration-200 ease-in-out;
 }
 .navbar.navbar-scrolled {
-    @apply bg-white text-neutral-700 border-b border-gray-200;
+    @apply bg-white bg-opacity-75 backdrop-blur-md text-neutral-700 border-b border-gray-200;
 }
 .navbar .logo {
     @apply brightness-0 invert;
