@@ -12,8 +12,5 @@ import IconArrowDown from '@/components/icons/IconArrowDown.vue'
                 <p class="text-xl"> Utilizing Wood as a Healthy and Environmentally Friendly Natural Resource</p>
             </div>
         </div>
-        <a href="#sec2"   class="bg-secondary bg-opacity-75 hover:bg-opacity-100 duration-300 p-6 text-white absolute bottom-0 ">
-            <IconArrowDown class="text-xl" />
-        </a>
     </VideoBackground>
 </template>

@@ -13,6 +13,7 @@ import projects from "@/assets/data/projects.json";
 import news from "@/assets/data/news.json";
 
 import IconAward from '@/components/icons/IconAward.vue';
+import Logoipsum from '@/components/Logoipsum.vue';
 import { Vue3Marquee } from 'vue3-marquee'
 
 import gsap from 'gsap';
@@ -168,15 +169,13 @@ onMounted(() => {
                 <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Awards</h4>
                 <Vue3Marquee :clone="true" :duration="30" :direction="'reverse'">
                     <div class="p-6 w-full flex justify-center items-center" v-for="item in 10" :key="item">
-                        <img src="/award2.png" alt="" class="opacity-30 w-48">
+                        <img src="/award2.png" alt="" class="opacity-20 w-36">
                     </div>
                 </Vue3Marquee>
             </div>
         </section>
 
-        <section>
-            <Marquee />
-        </section>
+
 
         <section class="py-20  section-map relative"> <!-- section four -->
             <div
@@ -191,6 +190,17 @@ onMounted(() => {
             <Video />
         </section>
 
+        <section class="logo-partner pt-20">
+            <div class="container">
+                <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Our Partners</h4>
+                <Vue3Marquee :clone="true" :duration="30">
+                    <div v-for="item in 10" :key="item" class="flex justify-center items-center w-full p-6">
+                        <Logoipsum  class="opacity-30"/>
+                    </div>
+                    </Vue3Marquee>
+                </div>
+        </section>
+
         <section class="py-20"> <!-- section six -->
             <div class="container">
 
@@ -203,8 +213,10 @@ onMounted(() => {
                             </h4>
                             <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, inventore.
                             </p>
-                            <button> <IconArrowUpRight class="stroke-primary" /> </button>
-                           
+                            <button>
+                                <IconArrowUpRight class="stroke-primary" />
+                            </button>
+
                         </div>
 
                     </div>
