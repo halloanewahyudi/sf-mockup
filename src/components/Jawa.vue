@@ -14,7 +14,7 @@ const pins = [
         title: 'Rimba Partikel Indonesia',
         description: 'Manufacturing company for Plywood, Particle Board and Furniture',
         address: 'Desa Mororejo, Kaliwungu, Kendal, Central Java Kendal Indonesia',
-        top: '20%',
+        top: '22%',
         left: '27%',
     },
     {
@@ -29,7 +29,7 @@ const pins = [
         description: 'Manufacturing company for Plywood, Particle Board and Furniture ',
         address: 'Desa Jatikalang, Krian-Sidoarjo, Kab. Sidoarjo Jawa Timur , Indonesia',
         top: '36%',
-        left: '66%',
+        left: '65%',
     },
 ]
 
@@ -61,7 +61,6 @@ const getInfo = (item) => {
                     </div>
                 </div>
                 <div v-else>
-
                     <p class="mt-3"> Theya are: Kutai Timber Indonesia, Rimba Partikel Indonesia, AST Indonesia, Sinar
                         Rimba
                         Pasifik</p>
