@@ -200,7 +200,7 @@ const clients = [
         <section class="">
             <div class="container">
                 <p class="text-xl font-semibold uppercase tracking-[6px]">Sumitomo Forestry</p>
-                <h4 class="text-2xl lg:text-4xl mb-10 text-primary"> Corporate Strory Movie</h4>
+                <h4 class="text-2xl lg:text-4xl mb-10 text-primary"> Corporate Story Movie</h4>
             </div>
             <Video />
         </section>
