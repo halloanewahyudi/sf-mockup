@@ -198,6 +198,10 @@ const clients = [
         </section>
 
         <section class="">
+            <div class="container">
+                <p class="text-xl font-semibold uppercase tracking-[6px]">Sumitomo Forestry</p>
+                <h4 class="text-2xl lg:text-4xl mb-10 text-primary"> Corporate Strory Movie</h4>
+            </div>
             <Video />
         </section>
 
@@ -229,7 +233,8 @@ const clients = [
 
         <section class="news py-20">
             <div class="container">
-                <p class="mb-3">Discover What's New for You</p>
+  
+                <p class="text-xl font-semibold uppercase tracking-[6px] ">Discover What's New for You</p>
                 <h4 class="text-2xl lg:text-4xl mb-10 text-primary"> News & Articles</h4>
                
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
@@ -237,7 +242,12 @@ const clients = [
                         <img :src="item.image" alt="" class="mb-3 w-full h-[280px] object-cover">
                         <p class="text-xs mb-2">{{ item.date }}</p>
                         <h4 class="text-primary cursor-pointer text-lg">{{ item.title }}</h4>
-                        <p class="text-sm">{{ item.description }}</p>
+                        <p class="text-sm mb-3">{{ item.description }}</p>
+                        <button
+                                class="text-primary text-sm bg-primary-50 hover:bg-primary-100 duration-200 py-3 px-4 flex items-center gap-2 max-w-max">Read
+                                More
+                                <IconArrowUpRight class="w-3 h-3 text-sm stroke-primary" />
+                            </button>
                     </div>
                 </div>
             </div>
