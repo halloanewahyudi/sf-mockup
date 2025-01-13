@@ -1,10 +1,20 @@
 <script lang="ts" setup>
 import { useRouter, useRoute } from "vue-router";
+import IconArrowUpRight from "./icons/IconArrowUpRight.vue";
 const router = useRouter()
 </script>
 
 <template>
+        <div class="bg-primary py-10 text-primary-100 hover:bg-primary-500 duration-300">
+            <div class="container ">
+               <div class="flex justify-center items-center gap-6 lg:gap-20">
+                <p class="text-xl">If you would like to know more, contact a member of the team.</p>
+                <button><IconArrowUpRight class="stroke-white" /></button>
+               </div>
+            </div>
+        </div>
     <section class="pt-20  pb-10 border-t border-neutral-100  bg-neutral-50">
+    
         <div class="container">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 <div class="address">
