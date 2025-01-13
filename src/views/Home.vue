@@ -204,17 +204,18 @@ const clients = [
         <section class="logo-partner py-20">
             <div class="container">
                 <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Our Partners</h4>
+            </div>
                 <Vue3Marquee :clone="true" :duration="20">
-                    <div v-for="(item,index) in clients" :key="index" class="flex justify-center items-center w-36 p-6">
-                       <img :src="item.image" alt="" class="w-[260px] h-auto object-contain">
+                    <div v-for="(item,index) in clients" :key="index" class="flex justify-center items-center p-6">
+                       <img :src="item.image" alt="" class="w-[160px] h-auto object-contain">
                     </div>
                 </Vue3Marquee>
                 <Vue3Marquee :clone="true" :duration="20" :direction="'reverse'">
-                    <div v-for="(item,index) in clients" :key="index" class="flex justify-center items-center w-36 p-6">
-                       <img :src="item.image" alt="" class="w-[260px] h-auto object-contain">
+                    <div v-for="(item,index) in clients" :key="index" class="flex justify-center items-center  p-6">
+                       <img :src="item.image" alt="" class="w-[160px] h-auto object-contain">
                     </div>
                 </Vue3Marquee>
-            </div>
+           
         </section>
 
         <section class="py-20  section-map relative min-h-screen flex flex-col justify-center items-center"> <!-- section four -->
@@ -274,5 +275,6 @@ const clients = [
 .section-map {
     background: url('/forest.jpg') no-repeat center;
     background-size: cover;
+    background-attachment: fixed;
 }
 </style>
