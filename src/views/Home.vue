@@ -52,6 +52,25 @@ onMounted(() => {
         scrollTrigger: {
             trigger: '.award-item',
             start: 'top 80%',
+            end: 'top 40%',
+            scrub: 1,
+            markers: false,
+        }
+    })
+
+    const newsItems = gsap.utils.toArray('.news-item') as HTMLElement[];
+    gsap.from(newsItems, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'power1.out',
+        stagger: {
+            each: 0.2, // Delay berurutan antara setiap item (0.2s)
+            from: 'start' // Urutan animasi dimulai dari elemen pertama
+        },
+        scrollTrigger: {
+            trigger: '.news',
+            start: 'top 80%',
             end: 'top 50%',
             scrub: 1,
             markers: false,
@@ -184,10 +203,11 @@ onMounted(() => {
         <section class="news py-20">
  <div class="container">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
-         <div class="" v-for="item in news" :key="item"> 
+         <div class="news-item" v-for="item in news" :key="item"> 
              <img :src="item.image" alt="" class="mb-3 w-full h-[280px] object-cover">
-             <h4 class="text-primary cursor-pointer">{{item.title}}</h4>
-             <p>{{item.description}}</p>
+             <p class="text-xs mb-2">{{item.date}}</p>
+             <h4 class="text-primary cursor-pointer text-lg">{{item.title}}</h4>
+             <p class="text-sm">{{item.description}}</p>
          </div>
     </div>
  </div>
