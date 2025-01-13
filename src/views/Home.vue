@@ -82,6 +82,22 @@ onMounted(() => {
     // end onmounted
 })
 
+const awards = [
+    { name: 'Award 1', image: '/award-1.png' },
+    { name: 'Award 2', image: '/award-2.png' },
+    { name: 'Award 3', image: '/award-3.png' },
+    { name: 'Award 4', image: '/award-4.png' },
+    { name: 'Award 5', image: '/award-5.png' },
+]
+
+const clients = [
+    { name: 'Client 1', image: '/logo-1.png' },
+    { name: 'Client 2', image: '/logo-2.png' },
+    { name: 'Client 3', image: '/logo-3.png' },
+    { name: 'Client 4', image: '/logo-4.png' },
+    { name: 'Client 5', image: '/logo-5.png' },
+    { name: 'Client 6', image: '/logo-6.png' },
+]
 
 </script>
 
@@ -103,7 +119,7 @@ onMounted(() => {
                     </div>
 
                     <div class="sekilas md:col-span-2">
-                        <p>About Us</p>
+                        <p class="text-xl font-medium">About Us</p>
                         <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Since our founding more than 330 years ago
                         </h4>
                         <div class="text">
@@ -117,7 +133,11 @@ onMounted(() => {
                                 through a diverse range of lifestyle-related services, we are committed to contributing
                                 to a
                                 sustainable and prosperous society.</p>
-                          <button class="text-primary bg-primary-50 hover:bg-primary-100 duration-200 py-3 px-4 flex items-center gap-2 max-w-max">Read More <IconArrowUpRight class="w-7"/></button>
+                            <button
+                                class="text-primary bg-primary-50 hover:bg-primary-100 duration-200 py-3 px-4 flex items-center gap-2 max-w-max">Read
+                                More
+                                <IconArrowUpRight class="w-7" />
+                            </button>
                         </div>
 
                     </div>
@@ -129,11 +149,11 @@ onMounted(() => {
 
         <section class="section pb-20"> <!-- section three -->
             <div class="container flex flex-col ">
-                
+
                 <div class=" bg-primary-50">
                     <Products>
                         <template #title>
-                            <p>Business Line</p>
+                            <p class="text-xl font-medium">Business Line</p>
                             <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Trading</h4>
                             <p class="text-sm">We started our business in Indonesia as a distributor of building
                                 materials. </p>
@@ -147,6 +167,7 @@ onMounted(() => {
 
         <section class="py-20 bg-gray-100"> <!-- section five -->
             <div class="container">
+                <p class="text-xl font-medium">Business Line</p>
                 <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Housing and Real Estate Business</h4>
                 <p class="mb-5 text-lg">We aim to develop the better quality of houses to contribute to the quality of
                     life in Indonesia
@@ -166,14 +187,14 @@ onMounted(() => {
         </section>
 
         <section class="py-20">
-            <div class="container overflow-hidden">
+            <div class="container">
                 <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Awards</h4>
-                <Vue3Marquee :clone="true" :duration="30" :direction="'reverse'">
-                    <div class="p-6 w-full flex justify-center items-center" v-for="item in 10" :key="item">
-                        <img src="/award2.png" alt="" class="opacity-20 w-36">
-                    </div>
-                </Vue3Marquee>
             </div>
+            <Vue3Marquee :clone="true" :duration="30" :direction="'reverse'">
+                <div class="p-6 w-full flex justify-center items-center" v-for="(item,index) in awards" :key="index">
+                    <img :src="item.image" alt="" class="w-36">
+                </div>
+            </Vue3Marquee>
         </section>
 
         <section class="">
@@ -183,15 +204,20 @@ onMounted(() => {
         <section class="logo-partner py-20">
             <div class="container">
                 <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Our Partners</h4>
-                <Vue3Marquee :clone="true" :duration="30">
-                    <div v-for="item in 10" :key="item" class="flex justify-center items-center w-full p-6">
-                        <Logoipsum  class="opacity-30"/>
+                <Vue3Marquee :clone="true" :duration="20">
+                    <div v-for="(item,index) in clients" :key="index" class="flex justify-center items-center w-36 p-6">
+                       <img :src="item.image" alt="" class="w-[260px] h-auto object-contain">
                     </div>
-                    </Vue3Marquee>
-                </div>
+                </Vue3Marquee>
+                <Vue3Marquee :clone="true" :duration="20" :direction="'reverse'">
+                    <div v-for="(item,index) in clients" :key="index" class="flex justify-center items-center w-36 p-6">
+                       <img :src="item.image" alt="" class="w-[260px] h-auto object-contain">
+                    </div>
+                </Vue3Marquee>
+            </div>
         </section>
 
-        <section class="py-20  section-map relative"> <!-- section four -->
+        <section class="py-20  section-map relative min-h-screen flex flex-col justify-center items-center"> <!-- section four -->
             <div
                 class="absolute bg-gradient-to-tr  from-black via-primary-500/60  to-transparent opacity-80 top-0 left-0 w-full h-full">
             </div>
@@ -201,17 +227,19 @@ onMounted(() => {
         </section> <!-- end section four -->
 
         <section class="news py-20">
- <div class="container">
-    <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Latest News</h4>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
-         <div class="news-item" v-for="item in news" :key="item"> 
-             <img :src="item.image" alt="" class="mb-3 w-full h-[280px] object-cover">
-             <p class="text-xs mb-2">{{item.date}}</p>
-             <h4 class="text-primary cursor-pointer text-lg">{{item.title}}</h4>
-             <p class="text-sm">{{item.description}}</p>
-         </div>
-    </div>
- </div>
+            <div class="container">
+                <p class="mb-3">Discover What's New for You</p>
+                <h4 class="text-2xl lg:text-4xl mb-10 text-primary"> News & Articles</h4>
+               
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
+                    <div class="news-item" v-for="item in news" :key="item">
+                        <img :src="item.image" alt="" class="mb-3 w-full h-[280px] object-cover">
+                        <p class="text-xs mb-2">{{ item.date }}</p>
+                        <h4 class="text-primary cursor-pointer text-lg">{{ item.title }}</h4>
+                        <p class="text-sm">{{ item.description }}</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!---- <section class="py-20"> 
@@ -247,5 +275,4 @@ onMounted(() => {
     background: url('/forest.jpg') no-repeat center;
     background-size: cover;
 }
-
 </style>

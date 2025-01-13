@@ -41,7 +41,7 @@ const getInfo = (item) => {
 </script>
 
 <template>
-    <div class="grid grid-cols-1 md:grid-cols-3  gap-6 text-primary-50">
+    <div class="grid grid-cols-1 md:grid-cols-3  gap-6 text-primary-50 ">
         <div>
             <h4 class="text-3xl text-white ">Group Factory List </h4>
             <p class=" mt-3">
