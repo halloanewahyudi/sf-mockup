@@ -202,6 +202,7 @@ onMounted(() => {
 
         <section class="news py-20">
  <div class="container">
+    <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Latest News</h4>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
          <div class="news-item" v-for="item in news" :key="item"> 
              <img :src="item.image" alt="" class="mb-3 w-full h-[280px] object-cover">
