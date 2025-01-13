@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import products from "@/assets/data/products.json";
-import { ref, nextTick } from "vue";
+import { ref, nextTick, onMounted } from "vue";
 import gsap from "gsap";
 
 // State untuk produk aktif
 const product = ref(null);
-const activeIndex = ref(-1);
+const activeIndex = ref(0); // Set tab aktif default ke indeks 0 (produk pertama)
 
 const getProduct = async (item, index) => {
     if (activeIndex.value === index) return; // Jika tab yang sama diklik, tidak ada perubahan
@@ -28,7 +28,10 @@ const getProduct = async (item, index) => {
     product.value = item; // Setel produk baru
 };
 
-const defaultProduct = products[0];
+// Inisialisasi produk default saat komponen dimuat
+onMounted(() => {
+    getProduct(products[activeIndex.value], activeIndex.value);
+});
 </script>
 
 <template>
@@ -51,17 +54,14 @@ const defaultProduct = products[0];
                                 <p>{{ product.description }}</p>
                             </div>
                         </div>
-
-                        <div v-else>
-                            <div class=" relative ">
-                                <div class="w-full h-full  overflow-hidden">
-                                    <img :src="defaultProduct.image" alt="" srcset=""
-                                        class="w-full h-full  object-cover hover:scale-105 duration-300">
-                                </div>
-                                <div class="p-5 bg-white absolute bottom-0 left-0 ">
-                                    <h3 class="text-xl font-bold mb-2">{{ defaultProduct.title }}</h3>
-                                    <p>{{ defaultProduct.description }}</p>
-                                </div>
+                        <div v-else class="product-content h-full relative w-full">
+                            <div class="w-full  overflow-hidden">
+                                <img :src="products[0].image" alt="" srcset=""
+                                    class="w-full h-full object-cover hover:scale-105 duration-300">
+                            </div>
+                            <div class="p-5 bg-white absolute bottom-0 left-0 ">
+                                <h3 class="text-xl font-bold mb-2">{{ products[0].title }}</h3>
+                                <p>{{ products[0].description }}</p>
                             </div>
                         </div>
                     </transition>
@@ -71,20 +71,19 @@ const defaultProduct = products[0];
             <!-- Daftar Tab -->
             <div class="md:col-span-1 lg:col-span-2 h-full flex flex-col justify-center items-center">
                 <div class="w-full p-6 lg:p-10">
-                    <slot name="title" ></slot>
-                <ul class="list-product space-y ">
-                    <li v-for="(item, index) in products" :key="item.id" :class="{
-                        'font-bold text-primary': index === activeIndex,
-                        'hover:text-primary-500': index !== activeIndex,
-                    }" class="">
-                       
-                        <button @click="getProduct(item, index)" class="flex items-center gap-2 p-2 w-full text-left font-medium hover:bg-primary-100 duration-300" :class="{ 'bg-primary-100': index === activeIndex }">
-                            <div v-if="index === activeIndex" class="w-2 h-2 rounded-full bg-primary inline-block"></div> 
-                            <div v-else class="w-2 h-2 rounded-full bg-primary-400 inline-block"></div>
-                             {{ item.title }}
-                        </button>
-                    </li>
-                </ul>
+                    <slot name="title"></slot>
+                    <ul class="list-product space-y">
+                        <li v-for="(item, index) in products" :key="item.id" :class="{
+                            'font-bold text-primary': index === activeIndex,
+                            'hover:text-primary-500': index !== activeIndex,
+                        }" class="">
+                            <button @click="getProduct(item, index)" class="flex items-center gap-2 p-2 w-full text-left font-medium hover:bg-primary-100 duration-300" :class="{ 'bg-primary-100': index === activeIndex }">
+                                <div v-if="index === activeIndex" class="w-2 h-2 rounded-full bg-primary inline-block"></div> 
+                                <div v-else class="w-2 h-2 rounded-full bg-primary-400 inline-block"></div>
+                                {{ item.title }}
+                            </button>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

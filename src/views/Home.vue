@@ -114,7 +114,7 @@ const clients = [
                             <Counter counter="240" suffix="Unit" text="Projects we carry out" />
                         </div>
                         <div class="h-full w-full bg-primary-100 p-6 flex flex-col justify-center items-center">
-                            <Counter counter="140" suffix="Unit" text="Projects we carry out" />
+                            <Counter counter="6" suffix="Location" text="Factories" />
                         </div>
                     </div>
 
