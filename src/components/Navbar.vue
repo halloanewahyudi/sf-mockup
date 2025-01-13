@@ -57,7 +57,7 @@ onMounted(() => {
                 </router-link>
                 <ul class="menu hidden lg:flex">
                         <li  v-for="item in menus" :key="item">
-                           <a href="/" target="_blank" rel="noopener noreferrer">{{ item }}</a>
+                           <a href="/"  rel="noopener noreferrer">{{ item }}</a>
                         </li>
                     </ul>
                 <button @click="openMenu = !openMenu"
