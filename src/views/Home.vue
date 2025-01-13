@@ -119,7 +119,7 @@ const clients = [
                     </div>
 
                     <div class="sekilas md:col-span-2">
-                        <p class="text-xl font-medium">About Us</p>
+                        <p class="text-xl font-semibold uppercase tracking-[6px]">About Us</p>
                         <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Since our founding more than 330 years ago
                         </h4>
                         <div class="text">
@@ -136,7 +136,7 @@ const clients = [
                             <button
                                 class="text-primary bg-primary-50 hover:bg-primary-100 duration-200 py-3 px-4 flex items-center gap-2 max-w-max">Read
                                 More
-                                <IconArrowUpRight class="w-7" />
+                                <IconArrowUpRight class="w-7 stroke-primary" />
                             </button>
                         </div>
 
@@ -153,7 +153,7 @@ const clients = [
                 <div class=" bg-primary-50">
                     <Products>
                         <template #title>
-                            <p class="text-xl font-medium">Business Line</p>
+                            <p class="text-xl font-semibold uppercase tracking-[6px]">Business Line</p>
                             <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Trading</h4>
                             <p class="text-sm">We started our business in Indonesia as a distributor of building
                                 materials. </p>
@@ -167,7 +167,7 @@ const clients = [
 
         <section class="py-20 bg-gray-100"> <!-- section five -->
             <div class="container">
-                <p class="text-xl font-medium">Business Line</p>
+                <p class="text-xl font-semibold uppercase tracking-[6px]">Business Line</p>
                 <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Housing and Real Estate Business</h4>
                 <p class="mb-5 text-lg">We aim to develop the better quality of houses to contribute to the quality of
                     life in Indonesia
