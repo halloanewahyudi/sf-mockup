@@ -37,7 +37,7 @@ const router = useRouter()
     </section>
     <section class="py-5 border-t bg-neutral-100">
         <div class="container text-center text-sm ">
-            © Copyright PT Sumitomo Forestry Indonesia. All Rights Reserved
+            © 2025 Sumitomo Forestry Indonesia. All rights reserved | powered by proweb
         </div>
     </section>
 </template>

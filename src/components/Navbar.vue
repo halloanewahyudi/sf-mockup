@@ -31,6 +31,7 @@ const getMenu = (item) => {
     }
 }
 const scrolledNavbar = () => {
+  
     window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
             navbar.value.classList.add('navbar-scrolled')

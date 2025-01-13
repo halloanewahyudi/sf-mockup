@@ -53,7 +53,7 @@ const props = defineProps<Props>()
         class="w-full  object-cover group-hover:scale-110 duration-300 ease-in-out">
     </div>
 
-    <div class="p-5 ml-6 -mt-10 bg-white relative flex justify-between  group">
+    <div class="p-5 ml-6 -mt-10 bg-gray-100 backdrop-blur-md bg-opacity-50 relative flex justify-between  group">
       <div class="">
         <a :href="props.link" target="_blank" class="cursor-pointer ">
           <h3 class="text-primary text-lg mb-1">{{ props.title }} </h3>

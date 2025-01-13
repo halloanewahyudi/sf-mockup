@@ -58,6 +58,6 @@ onMounted(() => {
       </h2>
       <span class="text-2xl font-semibold ">{{ props.suffix }}</span>
     </div>
-    <p class="text-xl">{{ props.text }}</p>
+    <p class="">{{ props.text }}</p>
   </div>
 </template>

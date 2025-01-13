@@ -58,6 +58,9 @@ onMounted(() => {
         }
     })
 
+
+
+    // end onmounted
 })
 
 
@@ -66,7 +69,7 @@ onMounted(() => {
 <template>
     <div class="main">
         <section class="cover pb-20">
-            <Cover />
+            <Cover link="#sec2" />
         </section>
         <section id="sec2" class="section-2 pb-20"> <!-- section two -->
             <div class="container">
@@ -81,6 +84,7 @@ onMounted(() => {
                     </div>
 
                     <div class="sekilas md:col-span-2">
+                        <p>About Us</p>
                         <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Since our founding more than 330 years ago
                         </h4>
                         <div class="text">
@@ -94,11 +98,7 @@ onMounted(() => {
                                 through a diverse range of lifestyle-related services, we are committed to contributing
                                 to a
                                 sustainable and prosperous society.</p>
-                            <p class="text-xl leading-relaxed">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita dicta perferendis
-                                eaque aperiam quia at? Voluptatum deleniti facilis eaque reprehenderit architecto alias
-                                quia voluptatibus unde, debitis tenetur corporis ipsa natus?
-                            </p>
+                          <button class="text-primary bg-primary-50 hover:bg-primary-100 duration-200 py-3 px-4 flex items-center gap-2 max-w-max">Read More <IconArrowUpRight class="w-7"/></button>
                         </div>
 
                     </div>
@@ -110,29 +110,11 @@ onMounted(() => {
 
         <section class="section pb-20"> <!-- section three -->
             <div class="container flex flex-col ">
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 bg-primary items-center text-white">
-                    <div class="md:col-span-2 lg:col-span-3 p-6 lg:p-10 ">
-                        <h4 class="text-3xl text-white mb-3">
-                            Interior Design Showroom
-                        </h4>
-                        <p>
-                            We started our business as a distributor of building materials.
-                            Not only the products from our group factories, we deal some Japanese products.
-                            In 2017, we lanunced Interior Design Showroom in Blok M, Jakarta.
-                            Just in front of the MRT station, you can see our products.
-                        </p>
-                    </div>
-                    <div class="h-full w-full lg:col-span-2 relative">
-                        <img src="/showroom.jpg" alt="" class="min-h-[380px] h-full w-full object-cover">
-                        <button class="p-4 bg-primary text-white absolute right-0 bottom-0 flex items-center gap-4">Read
-                            More
-                            <IconArrowUpRight class="stroke-white" />
-                        </button>
-                    </div>
-                </div>
+                
                 <div class=" bg-primary-50">
                     <Products>
                         <template #title>
+                            <p>Business Line</p>
                             <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Trading</h4>
                             <p class="text-sm">We started our business in Indonesia as a distributor of building
                                 materials. </p>
@@ -175,22 +157,11 @@ onMounted(() => {
             </div>
         </section>
 
-
-
-        <section class="py-20  section-map relative"> <!-- section four -->
-            <div
-                class="absolute bg-gradient-to-tr  from-black via-primary-500/60  to-transparent opacity-80 top-0 left-0 w-full h-full">
-            </div>
-            <div class="container relative">
-                <Jawa />
-            </div>
-        </section> <!-- end section four -->
-
-        <section class="mt-20">
+        <section class="">
             <Video />
         </section>
 
-        <section class="logo-partner pt-20">
+        <section class="logo-partner py-20">
             <div class="container">
                 <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Our Partners</h4>
                 <Vue3Marquee :clone="true" :duration="30">
@@ -201,7 +172,28 @@ onMounted(() => {
                 </div>
         </section>
 
-        <section class="py-20"> <!-- section six -->
+        <section class="py-20  section-map relative"> <!-- section four -->
+            <div
+                class="absolute bg-gradient-to-tr  from-black via-primary-500/60  to-transparent opacity-80 top-0 left-0 w-full h-full">
+            </div>
+            <div class="container relative">
+                <Jawa />
+            </div>
+        </section> <!-- end section four -->
+
+        <section class="news py-20">
+ <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">
+         <div class="" v-for="item in news" :key="item"> 
+             <img :src="item.image" alt="" class="mb-3 w-full h-[280px] object-cover">
+             <h4 class="text-primary cursor-pointer">{{item.title}}</h4>
+             <p>{{item.description}}</p>
+         </div>
+    </div>
+ </div>
+        </section>
+
+        <!---- <section class="py-20"> 
             <div class="container">
 
                 <div class="grid grid-cols-1 md:grid-cols-2  items-center ">
@@ -225,7 +217,7 @@ onMounted(() => {
                     </div>
                 </div>
             </div>
-        </section> <!-- end section six -->
+        </section>  end section six -->
 
     </div>
 </template>
@@ -234,4 +226,5 @@ onMounted(() => {
     background: url('/forest.jpg') no-repeat center;
     background-size: cover;
 }
+
 </style>

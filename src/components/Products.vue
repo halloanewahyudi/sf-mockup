@@ -78,7 +78,7 @@ const defaultProduct = products[0];
                         'hover:text-primary-500': index !== activeIndex,
                     }" class="">
                        
-                        <button @click="getProduct(item, index)" class="flex items-center gap-2 p-2 text-left font-medium hover:bg-primary-100 duration-200">
+                        <button @click="getProduct(item, index)" class="flex items-center gap-2 p-2 w-full text-left font-medium hover:bg-primary-100 duration-300">
                             <div v-if="index === activeIndex" class="w-2 h-2 rounded-full bg-primary inline-block"></div> 
                             <div v-else class="w-2 h-2 rounded-full bg-primary-400 inline-block"></div>
                              {{ item.title }}

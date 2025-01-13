@@ -44,7 +44,7 @@ const getInfo = (item) => {
     <div class="grid grid-cols-1 md:grid-cols-3  gap-6 text-primary-50">
         <div>
             <h4 class="text-3xl text-white ">Group Factory List </h4>
-            <p class="text-xl mt-3">
+            <p class=" mt-3">
                 We have 4 factories that produce high quality Plywood, Particle Board and Furniture in Java
                 island.
             </p>

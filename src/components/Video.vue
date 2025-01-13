@@ -59,7 +59,7 @@ onMounted(() => {
       scrollTrigger: {
         trigger: '.video-thumbnail',
         start: 'top 80%',
-        end: 'top 40%',
+        end: 'top 60%',
         scrub: 1,
         markers: false,
       },
