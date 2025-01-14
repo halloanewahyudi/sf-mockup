@@ -111,10 +111,10 @@ const clients = [
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-10 items-center">
                     <div class=" text-primary flex flex-col justify-center items-center h-full">
                         <div class="h-full w-full bg-primary-50 p-6 flex flex-col justify-center items-center">
-                            <Counter counter="240" suffix="Unit" text="Projects we carry out" />
+                            <Counter :counter="240" suffix="Unit" text="Projects we carry out" />
                         </div>
                         <div class="h-full w-full bg-primary-100 p-6 flex flex-col justify-center items-center">
-                            <Counter counter="4" suffix="Location" text="Factories" />
+                            <Counter :counter="4" suffix="Location" text="Factories" />
                         </div>
                     </div>
 

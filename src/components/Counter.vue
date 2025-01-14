@@ -34,7 +34,7 @@ onMounted(() => {
           end: 'top 60%', // Menghentikan animasi saat elemen mencapai 60% viewport
           //scrub: 1, // Animasi mengikuti scroll
         },
-        snap: { innerText: 3 }, // Loncat angka per 1
+        snap: { innerText: 1 }, // Loncat angka per 1
         onUpdate: function () {
           if (counter.value) {
             counter.value.innerText = Math.floor(Number(counter.value.innerText)).toString();
