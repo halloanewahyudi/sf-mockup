@@ -114,7 +114,7 @@ const clients = [
                             <Counter counter="240" suffix="Unit" text="Projects we carry out" />
                         </div>
                         <div class="h-full w-full bg-primary-100 p-6 flex flex-col justify-center items-center">
-                            <Counter counter="6" suffix="Location" text="Factories" />
+                            <Counter counter="4" suffix="Location" text="Factories" />
                         </div>
                     </div>
 
@@ -123,7 +123,7 @@ const clients = [
                         <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Since our founding more than 330 years ago
                         </h4>
                         <div class="text">
-                            <p class="text-xl leading-relaxed"> We have accumulated technical expertise and know how
+                            <p class="text-lg leading-relaxed"> We have accumulated technical expertise and know how
                                 related to wood, cultivated relationships with our customers, developed an extensive
                                 network
                                 of
@@ -155,7 +155,7 @@ const clients = [
                         <template #title>
                             <p class="text-xl font-semibold uppercase tracking-[6px]">Business Line</p>
                             <h4 class="text-2xl lg:text-4xl mb-3 text-primary">Trading</h4>
-                            <p class="text-sm">We started our business in Indonesia as a distributor of building
+                            <p class="">We started our business in Indonesia as a distributor of building
                                 materials. </p>
                             <hr class="my-5">
                         </template>
